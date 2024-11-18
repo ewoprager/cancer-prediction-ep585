@@ -2,5 +2,5 @@
 .venv/
 venv/
 .env
-__pypackages__/
+**/__pypackages__/
 **/__pycache__/
