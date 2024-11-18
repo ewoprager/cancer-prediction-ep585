@@ -1,0 +1,9 @@
+**/build/
+.venv/
+venv/
+.env
+**/__pypackages__/
+**/__pycache__/
+dist/
+.vscode/
+.mypy_cache/
