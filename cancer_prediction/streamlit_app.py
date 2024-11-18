@@ -21,7 +21,17 @@ def load_model(path='cancer_model.pkl'):
     model.load(path)
     return model
 
-def train_and_save_model(train_data, filename='cancer_model.pkl'):
+def train_and_save_model(train_data: pd.DataFrame, filename: str='cancer_model.pkl') -> CancerModel:
+    """
+    Train a model using the given data and save it to the specified file.
+
+    Args:
+        train_data (pd.DataFrame): The training data
+        filename (str): (Optional) The name of the file to save the model to
+
+    Returns:
+        (CancerModel): The trained model
+    """
     model = CancerModel()
     filename = os.path.join(MODELS_DIR, filename)
     X = train_data.drop('target', axis=1)

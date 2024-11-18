@@ -18,6 +18,8 @@ typer = "^0.13.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.10.0"
+mkdocs = "^1.6.1"
+mkdocstrings = {extras = ["python"], version = "^0.27.0"}
 
 [tool.poetry.scripts]
 cancer-prediction = "cancer_prediction.cli:app"
