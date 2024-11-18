@@ -20,6 +20,10 @@ typer = "^0.13.0"
 black = "^24.10.0"
 mkdocs = "^1.6.1"
 mkdocstrings = {extras = ["python"], version = "^0.27.0"}
+pre-commit = "^4.0.1"
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+mypy = "^1.13.0"
 
 [tool.poetry.scripts]
 cancer-prediction = "cancer_prediction.cli:app"
@@ -27,3 +31,27 @@ cancer-prediction = "cancer_prediction.cli:app"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+exclude = '''
+/(
+      .eggs         
+    | .git          
+    | .hg
+    | .mypy_cache
+    | .tox
+    | venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+virtual_env = "venv"
